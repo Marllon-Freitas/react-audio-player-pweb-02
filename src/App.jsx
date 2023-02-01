@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import Player from "./components/Player"
+import Home from "./pages/Home";
+import { GlobalStyles } from "./styles/GlobalStyles";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <h1>MP3 Player</h1>
-      <Player song={"Isto é uma música"} />
-    </div>
-  )
+    <>
+      <GlobalStyles />
+      <Home />
+    </>
+  );
 }
 
-export default App
+export default App;
