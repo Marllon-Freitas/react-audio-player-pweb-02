@@ -4,7 +4,8 @@ export const GlobalStyles = createGlobalStyle`
 :root {
     --primary-color: #121212;
     --secondary-color: #fff;
-    --tertiary-color: #f2f2f2;
+    --gray: #b3b3b3;
+    --dark-background: #181818;
 }
   * {
     box-sizing: border-box;

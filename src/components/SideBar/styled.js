@@ -42,7 +42,7 @@ padding: 1.5rem;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
       &:hover {
-        background: #121212;
+        background: var(--dark-background);
         border-radius: 4px;
       }
 
@@ -53,7 +53,7 @@ padding: 1.5rem;
         align-items: center;
         justify-content: flex-start;
         text-decoration: none;
-        color: #fff;
+        color: var(--secondary-color);
         font-size: 0.8rem;
         font-weight: 500;
         padding-left: 10px;
@@ -76,7 +76,7 @@ padding: 1.5rem;
   .divisor {
     width: 100%;
     height: 0.5px;
-    background: #ccc;
+    background: var(--gray);
     filter: brightness(0.3);
   }
 `;

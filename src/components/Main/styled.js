@@ -6,7 +6,7 @@ export const MainWrapper = styled.div`
   left: 240px;
   right: 0;
   bottom: 88px;
-  background: #121212;
+  background: var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@ export const MainWrapper = styled.div`
       height: 252px;
       /* gray/50 */
 
-      background: #181818;
+      background: var(--dark-background);
       border-radius: 4px;
 
 
@@ -80,12 +80,12 @@ export const MainWrapper = styled.div`
       h2 {
         font-size: 0.8rem;
         font-weight: 500;
-        color: #fff;
+        color: var(--secondary-color);
       }
 
       h3 {
         font-size: 0.8rem;
-        color: #b3b3b3;
+        color: var(--gray);
       }
     }
   }

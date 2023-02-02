@@ -7,7 +7,7 @@ export const PlayerWrapper = styled.div`
   transform: translateX(-50%);
   width: 100%;
   height: 88px;
-  background-color: #181818;
+  background-color: var(--dark-background);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,7 +47,7 @@ export const PlayerWrapper = styled.div`
 
     p {
       font-size: 0.6rem;
-      color: #ccc;
+      color: var(--gray);
     }
   }
 
@@ -89,7 +89,7 @@ export const PlayerWrapper = styled.div`
       height: 2rem;
 
       &:hover {
-        color: #ccc;
+        color: var(--gray);
       }
 
       & > svg {
