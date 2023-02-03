@@ -146,7 +146,7 @@ function MusicDetails({ tracksSong, albumsImages }) {
               <div className="music-details__body__info__genre">
                 {musicGenre.length > 0 && (
                   <>
-                    <h2>{musicGenre.length >= 1 ? "Géneros:" : "Género:"}</h2>
+                    <h2>{musicGenre.length >= 1 ? "Gêneros:" : "Gênero:"}</h2>
                     {musicGenre.map((genre) => (
                       <p key={genre.id}>{genre.name}</p>
                     ))}
