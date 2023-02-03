@@ -23,4 +23,8 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
     height: 100vh;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;

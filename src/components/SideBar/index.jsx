@@ -5,13 +5,14 @@ import { AiFillHome, AiFillPlusCircle } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
 import { BiLibrary } from "react-icons/bi";
 import { IoIosHeartEmpty } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function SideBar() {
   return (
     <SideBarWrapper>
-      <div className="logo">
+      <Link to="/" className="logo">
         <img src={logo} alt="logo" />
-      </div>
+      </Link>
       <div className="menu">
         <ul>
           <li>
@@ -52,7 +53,7 @@ function SideBar() {
         </ul>
       </div>
 
-     <div className="divisor"></div>
+      <div className="divisor"></div>
     </SideBarWrapper>
   );
 }

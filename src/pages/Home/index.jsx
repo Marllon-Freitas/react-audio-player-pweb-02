@@ -5,9 +5,12 @@ import Player from "../../components/Player/Player";
 import SideBar from "../../components/SideBar";
 import { getTopSongs } from "../../services/";
 import { getAlbumImages } from "../../services/";
+import { Link, useParams } from "react-router-dom";
+import MusicDetails from "../MusicDetails";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const params = useParams();
   const [tracks, setTracks] = useState([]);
   const [albumsImages, setAlbumsImages] = useState([]);
 
@@ -42,12 +45,21 @@ function Home() {
       ) : (
         <>
           <SideBar />
-          <MainWrapper
-            tracksSong={tracks}
-            albumsImages={
-              typeof albumsImages !== "undefined" ? albumsImages : []
-            }
-          />
+          {(params.id && (
+            <MusicDetails
+              tracksSong={tracks}
+              albumsImages={
+                typeof albumsImages !== "undefined" ? albumsImages : []
+              }
+            />
+          )) || (
+            <MainWrapper
+              tracksSong={tracks}
+              albumsImages={
+                typeof albumsImages !== "undefined" ? albumsImages : []
+              }
+            />
+          )}
           <Player
             tracksSong={tracks}
             albumsImages={

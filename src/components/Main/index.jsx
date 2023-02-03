@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import { MainWrapper } from "./styled";
 
 function Main({ tracksSong, albumsImages }) {
   const [mainAlbumsImages, setMainAlbumsImages] = useState(albumsImages);
+  const params = useParams();
   useEffect(() => {
     setMainAlbumsImages(albumsImages);
   }, [albumsImages]);
@@ -11,14 +13,17 @@ function Main({ tracksSong, albumsImages }) {
       <div className="main__content__">
         <div className="main__content__cards">
           {tracksSong.map((tracks) => (
-            <div className="main__content__card" key={tracks.id}>
+            <Link
+              className="main__content__card"
+              key={tracks.id}
+              to={`/music/${tracks.artistId.replace(".", "")}`}
+            >
               <div className="main__content__card__image">
                 <img
                   src={
                     mainAlbumsImages.length > 0 &&
                     mainAlbumsImages.find(
-                      (image) =>
-                        image?.images[0]?.contentId === tracks?.albumId
+                      (image) => image?.images[0]?.contentId === tracks?.albumId
                     )
                       ? mainAlbumsImages.find(
                           (image) =>
@@ -33,7 +38,7 @@ function Main({ tracksSong, albumsImages }) {
                 <h2>{tracks.name}</h2>
                 <h3>{tracks.artistName}</h3>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

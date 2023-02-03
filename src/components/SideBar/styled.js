@@ -19,6 +19,7 @@ padding: 1.5rem;
   display: flex;
   align-items: flex-start;
   margin-bottom: 18px;
+  cursor: pointer;
   img {
     height: 100%;
   }
